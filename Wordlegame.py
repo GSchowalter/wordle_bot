@@ -12,4 +12,4 @@ class Wordlegame:
          
     def update_wordlist(self):
         for tile in self.tiels:
-            
+            tile.
