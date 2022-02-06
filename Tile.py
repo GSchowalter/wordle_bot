@@ -11,5 +11,9 @@ class Tile:
         for letter in letters:
             self.remove_letter(letter)
 
+    def place_letter(self, letter):
+        new_list = ''.join(filter(lambda x: x==letter, self.candidate_letters))
+        self.candidate_letters = new_list
+
     def get_candidates(self):
         return self.candidate_letters
