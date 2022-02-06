@@ -2,7 +2,7 @@ import re
 
 class Wordlist:
 
-    def __init__(self, list) -> None:
+    def __init__(self, list):
         self.list = list
 
     def remove_matching_words(self, pattern):

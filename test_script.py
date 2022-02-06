@@ -1,5 +1,5 @@
 import  Wordlegame
-import Wordlist
+import wordlist
 import wordlist_constants
 
 # list = Wordlist.Wordlist(wordlist_constants.VALIDGUESSES)
@@ -9,6 +9,17 @@ import wordlist_constants
 # print(length)
 # print(list.get_list()[length-1])
 
-game = Wordlegame.Wordlegame()
-game.remove_letters("qx")
-print(game.guess())
+test_game = Wordlegame.Wordlegame(wordlist_constants.TESTWORDS)
+game = Wordlegame.Wordlegame(wordlist_constants.VALIDGUESSES)
+
+# Test constructor
+assert len(test_game.get_wordlist().get_list()) == 5
+assert len(game.wordlist.get_list()) == 10657
+
+# Test remove letters
+test_game.remove_letters("x")
+test_game.update_wordlist()
+print(len(test_game.get_wordlist().get_list()))
+assert len(test_game.get_wordlist().get_list()) == 4
+
+

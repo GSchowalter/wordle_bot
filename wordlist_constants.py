@@ -1,3 +1,11 @@
+TESTWORDS = [
+  'tests',
+  'talks',
+  'zymic',
+  "coxae",
+  "hajji",  
+]
+
 VALIDGUESSES = [
   'aahed',
   'aalii',
